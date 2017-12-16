@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap.css">
+</head>
+<body>
+<h2>你确定要删除吗？</h2>
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="submit" class="btn btn-danger" value="确定">
+    <a href="{{ quxiao_url }}"  class="btn btn-success">取消</a>
+</form>
+</body>
+</html>

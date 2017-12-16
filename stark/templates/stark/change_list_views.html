@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <h2>列表页面</h2>
+{#            是否显示添加按钮需要判断一下#}
+        {% if show_add_btn %}
+          <a href="{{ add_url }}" class="btn btn-success">添加</a>
+        {% endif %}
+        <table class="table table-bordered">
+            <thead>
+            {% for foo in head_list %}
+            <th>{{ foo.head_list }}</th>
+            {% endfor %}
+            
+            </thead>
+            <tbody>
+                {% for row in data_list %}
+                <tr>
+                    {% for foo in row %}
+                        <td>{{ foo }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
